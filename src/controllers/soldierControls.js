@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 
 const visualizationUpdate = (uid, latitude, longitude, message) => {
     return new Promise( async (resolve, reject) => {
-        fetch('https://58d749a5.ngrok.io/nlp', {
+        fetch(`${process.env.NLP_URLs}/nlp`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
